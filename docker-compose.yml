@@ -1,0 +1,25 @@
+# Dokploy: docker compose up -d --build
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=dokploy-network
+      - traefik.http.routers.h1-pensum.rule=Host(`${APP_HOST:-h1-pensum.mercantec.tech}`)
+      - traefik.http.routers.h1-pensum.entrypoints=web
+      - traefik.http.routers.h1-pensum.service=h1-pensum
+      - traefik.http.services.h1-pensum.loadbalancer.server.port=3000
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3000/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+networks:
+  default:
+    name: dokploy-network
+    external: true

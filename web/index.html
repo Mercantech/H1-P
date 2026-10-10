@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="H1 pensum — moduler, uger og 50 skoledage for Datatekniker programmering."
+    />
+    <title>H1 Pensum · MAGS</title>
+    <script>
+      (() => {
+        const key = "h1-pensum-theme";
+        const stored = localStorage.getItem(key);
+        const theme = stored === "light" || stored === "dark" ? stored : "dark";
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Outfit:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=1" />
+  </head>
+  <body>
+    <div class="bg" aria-hidden="true"></div>
+
+    <header class="top">
+      <a class="brand" href="/">
+        <span class="brand-mark">H1</span>
+        <span class="brand-text">
+          <strong>Pensum</strong>
+          <small>MAGS · 10 uger</small>
+        </span>
+      </a>
+      <nav class="top-nav" aria-label="Eksterne links">
+        <a href="https://h1.mercantec.tech" target="_blank" rel="noopener">H1-site</a>
+        <a href="https://lup.dk/#/h1" target="_blank" rel="noopener">LUP</a>
+        <a id="link-notion" href="#" target="_blank" rel="noopener">Notion</a>
+      </nav>
+      <button
+        type="button"
+        class="theme-toggle"
+        id="theme-toggle"
+        aria-label="Skift til lys tilstand"
+        title="Skift tema"
+      >
+        <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M15.5 3.1a1 1 0 0 1 1.15 1.4A7.5 7.5 0 1 0 19.5 16a1 1 0 0 1 1.55 1.2A9.5 9.5 0 1 1 15.5 3.1Z"
+          />
+        </svg>
+        <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M12 4a1 1 0 0 1 1 1v1.2a1 1 0 1 1-2 0V5a1 1 0 0 1 1-1Zm0 12.8a4.8 4.8 0 1 0 0-9.6 4.8 4.8 0 0 0 0 9.6ZM5.6 5.6a1 1 0 0 1 1.4 0l.85.85a1 1 0 1 1-1.4 1.4L5.6 7A1 1 0 0 1 5.6 5.6Z"
+          />
+        </svg>
+      </button>
+    </header>
+
+    <main class="wrap">
+      <header class="hero">
+        <p class="eyebrow" id="hero-eyebrow">Hovedforløb 1</p>
+        <h1>Dit pensum på H1</h1>
+        <p class="lede" id="hero-lede"></p>
+        <div class="hero-stats" id="hero-stats"></div>
+        <div class="hero-actions" id="hero-actions"></div>
+      </header>
+
+      <section class="section" aria-labelledby="moduler-heading">
+        <div class="section-head">
+          <h2 id="moduler-heading">Moduler</h2>
+          <p class="section-hint">Find materialer og forløb pr. tema.</p>
+        </div>
+        <div class="modul-grid" id="modul-grid"></div>
+      </section>
+
+      <section class="section" aria-labelledby="plan-heading">
+        <div class="section-head">
+          <h2 id="plan-heading">50 skoledage</h2>
+          <p class="section-hint">Uge for uge — mandag til fredag.</p>
+        </div>
+        <div class="filter-row" id="modul-filter" role="tablist" aria-label="Filtrér på modul"></div>
+        <div class="week-list" id="week-list"></div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <p>
+        Plan følger MAGS H1-kalender. Opdater
+        <code>web/js/pensum.js</code> når programmet ændres.
+      </p>
+    </footer>
+
+    <script type="module" src="js/main.js?v=1"></script>
+  </body>
+</html>
