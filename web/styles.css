@@ -187,15 +187,6 @@ body {
   margin-bottom: 2.25rem;
 }
 
-.eyebrow {
-  margin: 0 0 0.35rem;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--accent-2);
-}
-
 .hero h1 {
   margin: 0;
   font-family: Outfit, sans-serif;
@@ -205,11 +196,11 @@ body {
   line-height: 1.1;
 }
 
-.lede {
-  margin: 0.75rem 0 0;
-  max-width: 38rem;
+.hero-tema {
+  margin: 0.5rem 0 0;
   color: var(--ink-soft);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
+  font-weight: 600;
 }
 
 .hero-stats {
@@ -244,7 +235,7 @@ body {
   margin-top: 0.2rem;
 }
 
-.hero-actions {
+.hero-links {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -284,21 +275,11 @@ body {
   margin-bottom: 2.5rem;
 }
 
-.section-head {
-  margin-bottom: 1rem;
-}
-
-.section-head h2 {
-  margin: 0;
+.section-title {
+  margin: 0 0 1rem;
   font-family: Outfit, sans-serif;
   font-size: 1.35rem;
   font-weight: 700;
-}
-
-.section-hint {
-  margin: 0.25rem 0 0;
-  font-size: 0.9rem;
-  color: var(--ink-soft);
 }
 
 .modul-grid {
@@ -330,8 +311,8 @@ body {
   border-top-color: #f0b429;
 }
 
-.modul-oop {
-  border-top-color: #b07cf5;
+.modul-dal {
+  border-top-color: #f59e42;
 }
 
 .modul-blazor {
@@ -356,13 +337,6 @@ body {
   font-family: Outfit, sans-serif;
   font-size: 1.08rem;
   font-weight: 700;
-}
-
-.modul-desc {
-  margin: 0;
-  flex: 1;
-  font-size: 0.9rem;
-  color: var(--ink-soft);
 }
 
 .modul-link {
@@ -464,6 +438,13 @@ body {
   padding: 0.15rem 0.5rem;
   border-radius: 999px;
   background: var(--tag-bg);
+}
+
+.week-fokus {
+  margin: 0;
+  padding: 0 1rem 0.65rem;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
 }
 
 .day-list {

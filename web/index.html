@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="H1 pensum — moduler, uger og 50 skoledage for Datatekniker programmering."
+      content="Overblik over H1 — uger, moduler og links til materialer."
     />
     <title>H1 Pensum · MAGS</title>
     <script>
@@ -23,7 +23,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Outfit:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=1" />
+    <link rel="stylesheet" href="styles.css?v=2" />
   </head>
   <body>
     <div class="bg" aria-hidden="true"></div>
@@ -33,11 +33,12 @@
         <span class="brand-mark">H1</span>
         <span class="brand-text">
           <strong>Pensum</strong>
-          <small>MAGS · 10 uger</small>
+          <small>MAGS</small>
         </span>
       </a>
-      <nav class="top-nav" aria-label="Eksterne links">
-        <a href="https://h1.mercantec.tech" target="_blank" rel="noopener">H1-site</a>
+      <nav class="top-nav" aria-label="Links">
+        <a href="https://h1.mercantec.tech" target="_blank" rel="noopener">H1</a>
+        <a id="link-sqlh1" href="https://sqlh1.mercantec.tech" target="_blank" rel="noopener">SQL-H1</a>
         <a href="https://lup.dk/#/h1" target="_blank" rel="noopener">LUP</a>
         <a id="link-notion" href="#" target="_blank" rel="noopener">Notion</a>
       </nav>
@@ -65,38 +66,28 @@
 
     <main class="wrap">
       <header class="hero">
-        <p class="eyebrow" id="hero-eyebrow">Hovedforløb 1</p>
-        <h1>Dit pensum på H1</h1>
-        <p class="lede" id="hero-lede"></p>
+        <h1>H1</h1>
+        <p class="hero-tema" id="hero-tema">C# · Banko · SQL · DAL · Blazor · Niche Markedsplads</p>
         <div class="hero-stats" id="hero-stats"></div>
-        <div class="hero-actions" id="hero-actions"></div>
+        <div class="hero-links" id="hero-links"></div>
       </header>
 
       <section class="section" aria-labelledby="moduler-heading">
-        <div class="section-head">
-          <h2 id="moduler-heading">Moduler</h2>
-          <p class="section-hint">Find materialer og forløb pr. tema.</p>
-        </div>
+        <h2 id="moduler-heading" class="section-title">Moduler</h2>
         <div class="modul-grid" id="modul-grid"></div>
       </section>
 
       <section class="section" aria-labelledby="plan-heading">
-        <div class="section-head">
-          <h2 id="plan-heading">50 skoledage</h2>
-          <p class="section-hint">Uge for uge — mandag til fredag.</p>
-        </div>
-        <div class="filter-row" id="modul-filter" role="tablist" aria-label="Filtrér på modul"></div>
+        <h2 id="plan-heading" class="section-title">Ugeplan</h2>
+        <div class="filter-row" id="modul-filter" role="tablist" aria-label="Filtrér uge"></div>
         <div class="week-list" id="week-list"></div>
       </section>
     </main>
 
     <footer class="foot">
-      <p>
-        Plan følger MAGS H1-kalender. Opdater
-        <code>web/js/pensum.js</code> når programmet ændres.
-      </p>
+      <p>MAGS · Datatekniker programmering</p>
     </footer>
 
-    <script type="module" src="js/main.js?v=1"></script>
+    <script type="module" src="js/main.js?v=2"></script>
   </body>
 </html>
