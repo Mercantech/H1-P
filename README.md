@@ -39,6 +39,6 @@ git init
 git add .
 git commit -m "H1 pensum landing page med 50 dage."
 git branch -M main
-git remote add origin https://github.com/Mercantech/H1-Pensum.git
+git remote add origin https://github.com/Mercantech/H1-P.git
 git push -u origin main
 ```
