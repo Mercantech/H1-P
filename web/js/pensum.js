@@ -5,7 +5,7 @@ export const meta = {
   title: "Hovedforløb 1",
   uger: 10,
   dage: 50,
-  tema: "C# · Banko · SQL · DAL · Clientside (Blazor) · Docker/Postgres · Niche Markedsplads",
+  tema: "C# · Banko · SQL · DAL · Clientside (Blazor) · Docker/netværk · Niche Markedsplads",
   notion:
     "https://app.notion.com/p/mercantec/H1-2025Q2-1cfdab5ca23780578fcefba0bf442775",
   repo: "https://github.com/Mercantech/H1",
@@ -109,13 +109,18 @@ export const weeks = [
     title: "C# + SQL · DAL",
     modul: "dal",
     fokus:
-      "DAL med ADO.NET eller Dapper. Fredag: Postgres i Docker (virtualisering + databaseserver).",
+      "DAL med ADO.NET eller Dapper. Fredag: Postgres i Docker — porte og host vs. container-net.",
     days: [
       day(1, "Koble app og database", ["Connection string", "Postgres"]),
       day(2, "ADO.NET", ["SqlConnection", "SqlCommand"]),
       day(3, "Dapper", ["ORM-light", "Mapping"]),
       day(4, "DAL-lag i praksis", ["Repository", "Separation"], "project"),
-      day(5, "Docker · Postgres i compose", ["Docker", "Volume", "Connection"], "teaching"),
+      day(
+        5,
+        "Docker · Postgres i compose",
+        ["Volume", "Porte", "localhost vs. service-navn"],
+        "teaching"
+      ),
     ],
   },
   {
@@ -136,10 +141,16 @@ export const weeks = [
     nr: 6,
     title: "Markedsplads — opstart",
     modul: "markedsplads",
-    fokus: "Idé, SCRUM og første sprint. Compose med Postgres er DoD.",
+    fokus:
+      "Idé, SCRUM og første sprint. Compose med Postgres er DoD — netværk for programmører.",
     days: [
       day(1, "Projekt-launch", ["Niche", "SCRUM"], "teaching"),
-      day(2, "Docker Compose i projektet", ["db", "api", "web"], "teaching"),
+      day(
+        2,
+        "Netværk for programmører · Compose",
+        ["HTTP", "Porte", "Service-DNS", "web↔api↔db"],
+        "teaching"
+      ),
       day(3, "Sprint 1", ["Markedsplads"], "project"),
       day(4, "Sprint 1", ["Markedsplads"], "project"),
       day(5, "Sprint review", ["Demo"], "presentation"),
@@ -162,10 +173,16 @@ export const weeks = [
     nr: 8,
     title: "Markedsplads — sprint 3",
     modul: "markedsplads",
-    fokus: "Integration, kvalitet — backup, rettigheder og fejlsøgning på DB.",
+    fokus:
+      "Integration, kvalitet — backup, rettigheder; db kun på internt compose-net.",
     days: [
       day(1, "Sprint 3", ["Markedsplads"], "project"),
-      day(2, "DB-drift: brugere, backup, restore", ["Postgres", "pg_dump", "Logs"], "teaching"),
+      day(
+        2,
+        "DB-drift: brugere, backup, restore",
+        ["pg_dump", "Logs", "Internt net"],
+        "teaching"
+      ),
       day(3, "Sprint 3", ["Markedsplads"], "project"),
       day(4, "Sprint 3", ["Markedsplads"], "project"),
       day(5, "Sprint review", ["Markedsplads"], "presentation"),
