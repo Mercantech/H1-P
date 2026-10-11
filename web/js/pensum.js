@@ -5,7 +5,7 @@ export const meta = {
   title: "Hovedforløb 1",
   uger: 10,
   dage: 50,
-  tema: "C# · Banko · SQL · DAL · Blazor · Niche Markedsplads",
+  tema: "C# · Banko · SQL · DAL · Clientside (Blazor) · Niche Markedsplads",
   notion:
     "https://app.notion.com/p/mercantec/H1-2025Q2-1cfdab5ca23780578fcefba0bf442775",
   repo: "https://github.com/Mercantech/H1",
@@ -46,7 +46,7 @@ export const moduler = [
   },
   {
     id: "blazor",
-    navn: "Blazor",
+    navn: "Clientside · Blazor",
     uger: [5],
     link: "https://h1.mercantec.tech",
     linkLabel: "H1-site",
@@ -119,15 +119,16 @@ export const weeks = [
   },
   {
     nr: 5,
-    title: "Blazor",
+    title: "Clientside · Blazor",
     modul: "blazor",
-    fokus: "Komponenter, databinding og UI mod jeres data.",
+    fokus:
+      "HTML, CSS og Bootstrap i Blazor — clientside-logik i C# (i stedet for JS/jQuery) mod Web API.",
     days: [
-      day(1, "Intro Blazor", ["Komponenter", "Routing"]),
-      day(2, "Databinding", ["Events", "Forms"]),
-      day(3, "Blazor + DAL", ["Services", "Injection"]),
-      day(4, "UI og Bootstrap", ["Layout", "Komponenter"]),
-      day(5, "Demo / review", ["Blazor"], "presentation"),
+      day(1, "HTML og CSS i Blazor", ["Semantik", "Selectors", "Box-model"]),
+      day(2, "Bootstrap og responsive UI", ["Layout", "Komponenter"]),
+      day(3, "Blazor — events og formularer", ["Databinding", "EditForm"]),
+      day(4, "HTTP og Web API", ["HttpClient", "Client–server"], "project"),
+      day(5, "Demo / review", ["Clientside", "Blazor"], "presentation"),
     ],
   },
   {
